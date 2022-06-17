@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Shelf Application</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" />
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <h1>Book Shelf Application</h1>
+        <div class="form-container bg-white shadow" id="add-booklist">
+            <h2 class="container-header ">Masukkan data buku</h2>
+            <form class="form" action="#" id="form">
+                <div class="container-child">
+                    <div class="form-group">
+                        <label for="title">Judul</label>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="writer">Penulis</label>
+                        <input type="text" id="writer" name="writer" required>
+                    </div>
+                </div>
+                <div class="container-child">
+                    <div class="form-group">
+                        <label for="date">Year</label>
+                        <input id="year" type="number" min="1900" max="2099" step="1" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Selesai dibaca?</label>
+                        <label class="switch">
+                            <input id="checkDone" type="checkbox">
+                            <span class="slider round"></span>
+                          </label>
+                    </div>
+                </div>
+                <div class="container-button">
+                    <button name="Add" class="btn-add">Add</button>
+                    <button style="display:none" name="Edit" class="btn-edit">Edit</button>
+
+                </div>
+
+
+            </form>
+        </div>
+
+        <div class="bookListContainer bg-white">
+            <form action="#" id="search">
+                <div class="search-group">
+                    <label>                    
+                        <h2 class="list-header-item">Search</h2>
+                    </label>
+                    <input type="text" name="search" id="searchValue">
+                    <button id="searchSubmit" type="submit" class="search-submit">Cari</button>
+                </div>
+            </form>
+            <div class="container">
+                <div class="list-header">
+                    <h2 class="list-header-item done-title">Selesai Dibaca</h2>
+                    <h2 class="list-header-item counter" id="done-counter">3</h2>
+                </div>
+                <div class="list-item" id="books-done">
+                    <div class="book-item">
+                        <div class="book-title"><span>TESTTEST</span> </div>
+                        <div class="book-writer"><span>Siapapun</span></div>
+                        <div class="book-year"><span>2022</span></div>
+                        <button class="readAgain-Button"><span>Baca Lagi</span></button>
+                        <button class="readAgain-Button"><span>Baca Lagi</span></button>
+                    </div>
+
+                    <div class="book-item">
+                        <div class="book-title"><span>TESTTEST</span> </div>
+                        <div class="book-writer"><span>Siapapun</span></div>
+                        <div class="book-year"><span>2022</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="list-header">
+                    <h2 class="list-header-item pending-title">Belum Selesai Dibaca</h2>
+                    <h2 class="list-header-item counter" id="pending-counter">3</h2>
+                </div>
+                <div class="list-item" id="books-pending">
+                    <div class="book-item">
+                        <div class="book-title"><span>TESTTEST</span> </div>
+                        <div class="book-writer"><span>Siapapun</span></div>
+                        <div class="book-year"><span>2022</span></div>
+                    </div>
+
+                    <div class="book-item">
+                        <div class="book-title"><span>TESTTEST</span> </div>
+                        <div class="book-writer"><span>Siapapun</span></div>
+                        <div class="book-year"><span>2022</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/script.js" type="text/javascript"></script>
+
+</body>
+
+</html>
